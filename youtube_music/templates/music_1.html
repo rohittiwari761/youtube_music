@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/static/css/main.css">
+  <style>
+
+html {
+  font-size:62.5%;
+  font-family:'Jost',sans-serif;
+}
+
+  </style>
+
+  <title>Music Fest</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+  <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type='text/css' href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+
+
+  <div class="container">
+    <div class="jumbotron">
+      <h3 class="text-center">Search For Any Movie</h3>
+      <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <input type="text" class="form-control" id="searchText" placeholder="Search Music, Artists" name='Music'>
+        <button type='submit' class='btn btn-primary' style="display:inline-block;">Search</button>
+      </form>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="music_container">
+   <h1>HEllo</h1>
+    <h2 id="title">{{video.title}}</h2>
+    <h3 id='artist'>{{video.author}}</h3>
+
+    <div class="img_container">
+      <img src="{{video.bigthumbhd}}" alt="">
+    </div>
+
+    <audio id='video' controls>
+      <source src="{{playurl}}" type="audio/mp3">
+    </audio>
+
+<!-- progree -->
+<div class="progressbar_container" id="progressbar">
+  <div class="progress_duration_container">
+    <div id='current' >0:00</div>
+    <div id='duration'>{{video.duration}}</div>
+  </div>
+<div class="progress_div" id="progress_div">
+  <div class="progress" id='progress'></div>
+</div>
+
+<!-- controls -->
+
+    <div class="music_controls">
+      <i class="fas fa-backward" id='previous' title='Previous'></i>
+  <i class="fas fa-play mainbutton" title='playbutton' id='playbutton'></i>
+      <i class="fas fa-forward" id='forward' title="Forward"></i>
+
+    </div>
+  </div>
+
+
+</div>
+</div>
+<script type = 'text/javascript'>
+let videoElem = document.getElementById("video");
+let playButton = document.getElementById("playbutton");
+let progress=document.getElementById("progress");
+
+let current_time=document.getElementById("current");
+const progress_div= document.getElementById("progress_div");
+
+
+playButton.addEventListener("click", handlePlayButton, false);
+playVideo();
+
+async function playVideo() {
+  try {
+    await videoElem.play();
+    playButton.classList.replace('fa-play', 'fa-pause');
+    // playButton.classList.add(" playing");
+  } catch(err) {
+    // playButton.classList.remove("playing");
+    playButton.classList.replace('fa-pause', 'fa-play');
+  }
+}
+
+function handlePlayButton() {
+  if (videoElem.paused) {
+    playVideo();
+  } else {
+    videoElem.pause();
+    playButton.classList.replace('fa-pause', 'fa-play');
+    // playButton.classList.remove("playing");
+  }
+}
+
+// progress js work
+videoElem.addEventListener('timeupdate',(event) =>{
+  // console.log(event);
+  const {currentTime,duration}=event.srcElement;
+
+// proggress time
+
+let progress_time=(currentTime/duration)*100
+progress.style.width=`${progress_time}%`
+
+// current duration updates
+
+
+let current_min= Math.floor(currentTime/60);
+let current_sec= Math.floor(currentTime%60);
+
+if(current_sec <10){
+  current_sec=`0${current_sec}`
+}
+
+let tot_current_time=`${current_min}:${current_sec}`
+current_time.textContent=`${tot_current_time}`
+
+
+})
+progress_div.addEventListener('click',(event) => {
+  const duration=videoElem.duration;
+
+  let move_progress=(event.offsetX/event.srcElement.clientWidth)*duration;
+  videoElem.currentTime=move_progress;
+
+})
+
+
+</script>
+
+
+</body>
+</html>

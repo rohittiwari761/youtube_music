@@ -1,0 +1,541 @@
+
+
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>MovieInfo</title>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+   <script
+ src="https://code.jquery.com/jquery-3.1.1.min.js"
+ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+ crossorigin="anonymous"></script>
+   <link rel="stylesheet" type='text/css' href="/youtube_music/static/css/style.css">
+   <link rel="stylesheet" type='text/css' href="/static/css/bootstrap.css">
+     <link rel="stylesheet" type='text/css' href="/static/css/bootstrap.min.css">
+
+     <style>
+
+
+     </style>
+ </head>
+ <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="/">Music Your Way</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarColor02">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">My Screen</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Pricing</a>
+         </li>
+
+         <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generes</a>
+       <div class="dropdown-menu">
+         
+       </div>
+     </li>
+       </ul>
+
+         <li class="nav-item">
+           <a class="nav-link" href="#">Log In</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link " href="#">Sign Up</a>
+         </li>
+
+     </div>
+   </nav>
+
+
+   <div class="container">
+     <div class="jumbotron">
+       <h3 class="text-center">Search For Any Movie</h3>
+       <form action="/" method="post">
+         <input type="hidden" name="csrfmiddlewaretoken" value="sBSmcNBuN0bQIRrqJF4v3LpmyTJ74rCBUihhQOYs84WPd9VuFxj0k8CJ5UtOJJI5">
+         <input type="text" class="form-control" id="searchText" placeholder="Search Music, Artists" name='Music'>
+         <button type='submit' class='btn btn-primary' style="display:inline-block;">Search</button>
+       </form>
+     </div>
+   </div>
+
+
+<section class="container section-songs">
+     <ul class="songs-showcase clearfix">
+         
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('AZmAgoir1Tc');" ><img src=https://i.ytimg.com/vi/AZmAgoir1Tc/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Sumit Goswami - Feelings </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('ZMLoJEgI2mY');" ><img src=https://i.ytimg.com/vi/ZMLoJEgI2mY/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feelings - Vatsala </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('51OIKDr3kOc');" ><img src=https://i.ytimg.com/vi/51OIKDr3kOc/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feelings Sumit Goswami </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('SEpTl9hlyq8');" ><img src=https://i.ytimg.com/vi/SEpTl9hlyq8/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>SUMIT GOSWAMI - ARMY (GANGWAR 2) </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('pUUhoS4WigM');" ><img src=https://i.ytimg.com/vi/pUUhoS4WigM/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feels (Official Video) AP Dhillon </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('va3JHUlMZHU');" ><img src=https://i.ytimg.com/vi/va3JHUlMZHU/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Tommy </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('qinTaL0ILaY');" ><img src=https://i.ytimg.com/vi/qinTaL0ILaY/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feelings </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('-Wzo7czeQbg');" ><img src=https://i.ytimg.com/vi/-Wzo7czeQbg/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feeling Proud Indian Army </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('NqoK8oVjrGA');" ><img src=https://i.ytimg.com/vi/NqoK8oVjrGA/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Ishare Tere Karti Nigah </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('X5h1GpM5sNg');" ><img src=https://i.ytimg.com/vi/X5h1GpM5sNg/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feeling </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('F1B9Fk_SgI0');" ><img src=https://i.ytimg.com/vi/F1B9Fk_SgI0/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Childish Gambino - Feels Like Summer</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('ozv4q2ov3Mk');" ><img src=https://i.ytimg.com/vi/ozv4q2ov3Mk/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Calvin Harris - Feels (Official Video) ft. Pharrell Williams, Katy Perry, Big Sean</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('R1Ga8GuSDDk');" ><img src=https://i.ytimg.com/vi/R1Ga8GuSDDk/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feeling (Full Video) Rajak_Kanchan Verma _New Punjabi Song 2021_Romantic Song_Raj Music_Latest Song</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('a5AglCjWnis');" ><img src=https://i.ytimg.com/vi/a5AglCjWnis/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Feeling Proud Indian Army </h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('AhWyTSYuXHM');" ><img src=https://i.ytimg.com/vi/AhWyTSYuXHM/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Tory Lanez - Feels (feat. Chris Brown) [Official Music Video]</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('S17Pa4mztDg');" ><img src=https://i.ytimg.com/vi/S17Pa4mztDg/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Ed Sheeran, Kygo, Avicii, Martin Garrix, The Chainsmokers, Dua Lipa Styles - Feeling Me</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('yXncEqMj4bc');" ><img src=https://i.ytimg.com/vi/yXncEqMj4bc/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Ed Sheeran, Kygo, Avicii, Martin Garrix, The Chainsmokers, Dua Lipa Styles - Feeling Me #38</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('2k5w6eTxGXk');" ><img src=https://i.ytimg.com/vi/2k5w6eTxGXk/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Lauv - Feelings [Official Visualizer]</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('qNhaHnEzS7o');" ><img src=https://i.ytimg.com/vi/qNhaHnEzS7o/hqdefault.jpg alt=""></button>
+           </figure>
+            <h6>Just Relax &amp;amp; Feeling Happy Vol. 1</h6>
+          </li> 
+          
+          <li>
+            <figure class="songs-photo">
+               <button onclick="loadDoc('O4UNHzPU9h8');" ><img src=https://i.ytimg.com/vi/O4UNHzPU9h8/hqdefault_live.jpg alt=""></button>
+           </figure>
+            <h6>Ed Sheeran, Kygo, Avicii, Martin Garrix, The Chainsmokers, Dua Lipa Styles - Feeling Me #88</h6>
+          </li> 
+          
+    </ul>
+    
+</section>
+
+
+
+
+<div class="container" id="main_container">
+ </div>
+
+
+<!-- RELATED VIDEO FINISH -->
+
+<audio id='video' controls autoplay></audio>
+
+     <div class="cs_audioplayer">
+    <div class="cs_audio_bar">
+       <div class="cs_audio_bar_now"></div>
+       <div class="cs_audio_bar_loaded"></div>
+   </div>
+
+     <div class="row" style="background-color: dimgray; padding: 1px;">
+
+         <div class="col-md-2 " style="background-color: dimgray;" >
+            <div class="music_controls" >
+         <i class="fas fa-fast-backward" id='previous' title='Previous' onclick="prev();"></i>
+         <i class="fas fa-play mainbutton" title='playbutton' id='playButton'></i>
+         <i class="fas fa-fast-forward" id='forward' title="Forward" onclick='next();'></i>
+         </div>
+         <p style="font-weight: 100;display: inline-block;" id="current" >00</p>
+          <p style="font-weight: 100;display: inline-block;" id="duration">00:03:31</p>
+         </div>
+
+         <div class="col-md-8" style="background-color: dimgray; padding: 10px;">
+
+           <div class="img" style="display:inline;float:left; padding-right: 10px;text-align: left">
+               <img src="#" alt="" style=" width:60px; display:inline;"  id="img_container">
+         </div>
+
+         <div class="info" style="display:inline; white-space:nowrap;line-height:1px; ">
+              <h6 style="padding-top: 8px;text-align: left;" id="title"></h6>
+             <p style="text-align: left;" id="artist"></p>
+         </div>
+
+         </div>
+
+         <div class="col-md-2">
+             <div class="slider_container" style="padding-top:10px; ">
+               <i class="fas fa-volume-down"></i>
+                 <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            </div>
+
+             <i class="fas fa-repeat">KK</i>
+             <i class="fas fa-random">K</i>
+         </div>
+     </div>
+
+     </div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+function load_recent(id){
+
+  var xhttp = new XMLHttpRequest();
+  var videoid =id
+  var url='/music_now/?videoid='+videoid
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     // var data=JSON.parse(xhttp.responseText);
+     var data = JSON.parse(xhttp.responseText).data_view;;
+
+     // data=JSON.parse(data);
+     console.log(data,'data',data[0],'data of music new')
+     // var new_data = JSON.parse(data);
+     // console.log(JSON.parse(data),new_data.title)
+     // document.getElementById('video').setAttribute('src',data[0].playurl)
+
+      set_parameter(data);
+
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+
+
+}
+
+function loadDoc(id) {
+  load_recent(id)
+  var xhttp = new XMLHttpRequest();
+  var videoid =id
+  var url='/music/?videoid='+videoid
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     // var data=JSON.parse(xhttp.responseText);
+     data = JSON.parse(xhttp.responseText).data_view;;
+
+     // data=JSON.parse(data);
+     console.log(data,'data',data[0],'data of loaddoc')
+     // var new_data = JSON.parse(data);
+     // console.log(JSON.parse(data),new_data.title)
+     // document.getElementById('video').setAttribute('src',data[0].playurl)
+
+      // set_parameter(data);
+      load_related(data);
+    }
+  };
+
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
+
+function set_parameter(data){
+  document.getElementById('video').setAttribute('src',data[0].playurl)
+  document.getElementById('title').innerHTML=data[0].title;
+  document.getElementById('artist').innerHTML=data[0].author;
+  document.getElementById('img_container').setAttribute('src',data[0].img);
+  document.getElementById('duration').innerHTML=data[0].duration;
+  playButton.classList.replace('fa-play', 'fa-pause');
+   // console.log(data,data.author)
+}
+
+  let videoElem = document.getElementById("video");
+  let playButton = document.getElementById("playButton");
+  // let progress=document.getElementById("progress");
+
+  let current_time=document.getElementById("current");
+  // const progress_div= document.getElementById("progress_div");
+
+
+
+       playButton.addEventListener("click", handlePlayButton, false);
+       playVideo();
+
+       async function playVideo() {
+         try {
+           await videoElem.play();
+           playButton.classList.replace('fa-play', 'fa-pause');
+           // playButton.classList.add(" playing");
+         } catch(err) {
+           // playButton.classList.remove("playing");
+           playButton.classList.replace('fa-pause', 'fa-play');
+         }
+       }
+
+       function handlePlayButton() {
+         if (videoElem.paused) {
+           playVideo();
+
+         } else {
+           videoElem.pause();
+           console.log('paused',videoElem)
+           playButton.classList.replace('fa-pause', 'fa-play');
+           // playButton.classList.remove("playing");
+         }
+       }
+
+//volumr=e change event
+let volume_slider = document.querySelector(".volume_slider");
+
+      function setVolume() {
+ // Set the volume according to the
+ // percentage of the volume slider set
+
+ videoElem.volume = volume_slider.value / 100;
+}
+
+
+
+       // progress js work
+       videoElem.addEventListener('timeupdate',(event) =>{
+       //   // console.log(event);
+         const {currentTime,duration}=event.srcElement;
+       //
+       // // proggress time
+       //
+       // let progress_time=(currentTime/duration)*100
+       // progress.style.width=`${progress_time}%`
+
+       // current duration updates
+
+
+       let current_min= Math.floor(currentTime/60);
+       let current_sec= Math.floor(currentTime%60);
+       //
+       if(current_sec <10){
+         current_sec=`0${current_sec}`
+       }
+       //
+       let tot_current_time=`${current_min}:${current_sec}`
+       current_time.textContent=`${tot_current_time}/`
+       //
+       //
+       })
+
+
+
+       //audio seek bar js
+
+
+       videoElem.ontimeupdate = function() {
+	    var audio_currentTime = videoElem.currentTime;
+
+      var playingPercentage = (audio_currentTime/videoElem.duration)*100;
+      //console.log(playingPercentage);
+      document.getElementsByClassName("cs_audio_bar_now")[0].style.width = playingPercentage+"%";
+
+};
+
+       videoElem.addEventListener('progress', function()
+{
+  var ranges = [];
+  var totaltime = videoElem.duration;
+  var currentduration = videoElem.currentTime;
+  for(var i = 0; i < videoElem.buffered.length; i ++)
+  {
+    ranges.push([
+      buffTimestart = videoElem.buffered.start(i),
+      buffTimeend = videoElem.buffered.end(i),
+      buffpercentage = (buffTimeend/totaltime)*100,
+      //document.getElementById("showbfr").innerHTML = buffpercentage,
+      document.getElementsByClassName("cs_audio_bar_loaded")[0].style.width = buffpercentage+"%"
+      ]);
+  }
+}, false);
+
+
+       // Change current play on click
+
+document.getElementsByClassName("cs_audio_bar")[0].addEventListener("click", vCurrentBarFun);
+function vCurrentBarFun(event) {
+  vCurrentBarWidth = event.clientX - document.getElementsByClassName("cs_audio_bar")[0].offsetLeft;
+  document.getElementsByClassName("cs_audio_bar_now")[0].style.width = vCurrentBarWidth+"px";
+  videoElem.currentTime = (((vCurrentBarWidth / document.getElementsByClassName("cs_audio_bar")[0].offsetWidth)*100)/100) * videoElem.duration;
+
+}
+
+      videoElem.addEventListener('ended', (event) => {
+  console.log('Video stopped either because 1) it was over, ' +
+      'or 2) no further data is available.');
+      next();
+           // playButton.classList.replace('fa-pause', 'fa-play');
+
+});
+
+function load_new(id){
+  console.log('button',id)
+}
+
+function load_related(data){
+  // document.getElementById('').innerHTML = ''
+  console.log(data)
+  for(let i=0;i<data.length;i++){
+    var div_row=document.createElement('div');
+          div_row.classList.add('row')
+
+        var div_img = document.createElement('div');
+          div_img.classList.add('col','col-lg-2')
+          div_img.style="background-color: black;padding: 0px;flex-grow: 0;"
+
+        var related_img=document.createElement('img')
+        related_img.setAttribute('src',data[i].img)
+        related_img.style="width: 100px;object-fit:contain;"
+
+        var btn= document.createElement('span');
+        btn.innerHTML='<i class="fas fa-play-circle fa-3x" style="color: aliceblue;"></i>'
+
+        btn.addEventListener('click', function(){
+            n=i
+          console.log(data[i],i,n)
+          set_parameter([data[i]])
+        })
+
+          div_row.appendChild(div_img)
+          div_img.appendChild(related_img)
+          div_img.appendChild(btn)
+
+          document.getElementById('main_container').appendChild(div_row)
+
+
+
+        var div_info=document.createElement('div')
+        div_info.classList.add('col-md-auto')
+         div_row.appendChild(div_info)
+
+        var title=document.createElement('h6')
+        title.id='h6_title'
+        title.innerHTML=data[i].title.split('|',2)
+        div_info.appendChild(title)
+
+  }
+
+}
+n=0
+
+function next(){
+set_parameter([data[n+1]]);
+n++;
+
+}
+function prev(){
+  set_parameter([data[n-1]]);
+  n--;
+}
+
+
+
+
+</script>
+ </body>
+</html>
