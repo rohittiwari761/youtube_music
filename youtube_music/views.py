@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from apiclient.discovery import build
-import pafy,pickle
+import pafy
 import time
 from django.http import HttpResponse
 import json
